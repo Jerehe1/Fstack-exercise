@@ -14,3 +14,19 @@ user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
 server ->> user: Javascript file
 user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
 server ->> user: Updated data.json
+
+
+Single page diagram
+
+sequenceDiagram
+participant user
+participant server
+
+user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+server ->> user: HTML document
+user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server ->> user: CSS file
+user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server ->> user: Javascript file
+user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server ->> user: data.json with {content}
