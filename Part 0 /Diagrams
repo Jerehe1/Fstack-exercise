@@ -30,3 +30,13 @@ user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
 server ->> user: Javascript file
 user ->> server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
 server ->> user: data.json with {content}
+
+
+Single page post diagram
+
+sequenceDiagram
+participant user
+participant server
+
+user ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server ->> user: 201 Created
