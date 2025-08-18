@@ -1,1 +1,8 @@
 # Fstack-exercise
+
+sequenceDiagram
+participant user
+participant server
+
+user ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server ->> user: 201 Created
