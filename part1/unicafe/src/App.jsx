@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './style.css'
 
 const Statistic = ({text, value}) => {
   return (
@@ -7,7 +8,7 @@ const Statistic = ({text, value}) => {
 }
 
 const Button = ({onClick, text}) => (
-  <button onClick={onClick}>{text}</button>
+  <button className="button" onClick={onClick}>{text}</button>
 )
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
   
 
   return (
-    <>
+    <div className="container">
     <div>
       <h1>Give Feedback</h1>
       <Button onClick={handleGoodClick} text="Good" />
@@ -43,8 +44,7 @@ const App = () => {
       {total === 0 ? (
         <p>No feedback given</p>
       ) : (
-        <div>
-          <table>
+        <table className="table">
             <tbody>
             <tr>
               <th>Feedback</th>
@@ -70,10 +70,9 @@ const App = () => {
             </tr>
             </tbody>
           </table>
-        </div>
       )}
     </div>
-    </>
+    </div>
   )
 }
 
